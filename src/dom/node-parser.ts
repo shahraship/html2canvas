@@ -118,3 +118,5 @@ export const isStyleElement = (node: Element): node is HTMLStyleElement => node.
 export const isScriptElement = (node: Element): node is HTMLScriptElement => node.tagName === 'SCRIPT';
 export const isTextareaElement = (node: Element): node is HTMLTextAreaElement => node.tagName === 'TEXTAREA';
 export const isSelectElement = (node: Element): node is HTMLSelectElement => node.tagName === 'SELECT';
+export const isSlotElement = (node: Node): node is HTMLSlotElement => (node as Element).tagName === 'SLOT';
+export const isCustomElement = (node: Element): boolean => node.tagName.indexOf('-') > 0;
